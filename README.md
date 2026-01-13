@@ -1,4 +1,4 @@
-# MetinFarmBot / `game_watcher` 🕵️‍♂️🖥️🎮
+# FarmBot / `game_watcher` 🕵️‍♂️🖥️🎮
 
 A Windows tool that watches a game window, detects a specific UI text label via **template matching** (no OCR), then performs a deterministic sequence of clicks/keys. Built to be **safe, debuggable, and configurable**.
 
