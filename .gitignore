@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.log
+
+artifacts/logs/*
+artifacts/debug_frames/*
+
+# optional: keep example templates, ignore real ones if you want
+templates/*
+
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/

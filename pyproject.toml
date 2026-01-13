@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-watcher"
+version = "0.1.0"
+description = "Template-matching screen watcher + deterministic action runner (safe scaffold)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "numpy>=1.26",
+  "opencv-python>=4.9",
+  "dxcam>=0.0.5",
+  "mss>=9.0.1",
+  "pywin32>=306",
+  "pydirectinput>=1.0.4",
+  "pynput>=1.7.7",
+  "pydantic>=2.6",
+  "pyyaml>=6.0.1",
+  "rich>=13.7"
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6",
+  "pytest>=8.0"
+]
+
+[project.scripts]
+game-watcher = "game_watcher.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

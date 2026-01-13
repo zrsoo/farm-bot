@@ -1,0 +1,52 @@
+app:
+  # Safety first: do NOT click anything until matching is proven.
+  dry_run: true
+
+  scan_interval_sec: 3.5
+  cooldown_sec: 2.0
+
+window:
+  # You’ll set one of these once you know it.
+  title_regex: ".*YourGameTitle.*"
+  require_foreground: true
+
+capture:
+  backend: "dxcam"   # "dxcam" or "mss"
+  # If true: capture only the window client area (recommended).
+  capture_window_only: true
+
+vision:
+  mode: "edges"      # "raw" | "edges" | "masked" (we’ll implement later)
+  threshold: 0.88
+  # Optional: require same match in N consecutive scans to reduce false positives.
+  require_consecutive_hits: 1
+
+templates:
+  # You’ll swap packs between runs.
+  active_pack: "example_pack"
+  root_dir: "templates"
+  # Which template files to load from the pack.
+  files:
+    - "t1.png"
+
+actions:
+  # This is the action sequence AFTER we click on the detected text.
+  # We’ll wire this later.
+  sequence:
+    - type: "sleep"
+      seconds: 0.2
+    - type: "key"
+      keys: ["esc"]
+    - type: "sleep"
+      seconds: 0.2
+
+safety:
+  kill_switch_key: "f8"
+  pause_toggle_key: "f9"
+  max_triggers_per_minute: 6
+
+debug:
+  save_debug_frames: true
+  save_on_match: true
+  save_on_near_miss: true
+  near_miss_threshold: 0.80
