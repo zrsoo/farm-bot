@@ -52,33 +52,33 @@
     * [x] 3.5.2 Save results in logs
   * [x] 3.6 Update config/default.yaml with real title_regex for the game window
 
-* [ ] 4. Frame capture (dry-run: capture only, no matching yet)
+* [x] 4. Frame capture (dry-run: capture only, no matching yet)
 
-  * [ ] 4.1 Implement capture interface (base class)
+  * [x] 4.1 Implement capture interface (base class)
 
-    * [ ] 4.1.1 capture_frame(region) -> numpy image (BGR/RGB defined)
-    * [ ] 4.1.2 backend selection via config (dxcam/mss)
-  * [ ] 4.2 Implement dxcam backend
+    * [x] 4.1.1 capture_frame(region) -> numpy image (BGR/RGB defined)
+    * [x] 4.1.2 backend selection via config (dxcam/mss)
+  * [x] 4.2 Implement dxcam backend
 
-    * [ ] 4.2.1 Initialize dxcam camera
-    * [ ] 4.2.2 Capture region = window client area
-    * [ ] 4.2.3 Handle failure/None frames robustly
-  * [ ] 4.3 Implement mss backend (fallback)
+    * [x] 4.2.1 Initialize dxcam camera
+    * [x] 4.2.2 Capture region = window client area
+    * [x] 4.2.3 Handle failure/None frames robustly
+  * [x] 4.3 Implement mss backend (fallback)
 
-    * [ ] 4.3.1 Capture region = window client area
-    * [ ] 4.3.2 Convert to numpy array
+    * [x] 4.3.1 Capture region = window client area
+    * [x] 4.3.2 Convert to numpy array
   * [ ] 4.4 Implement capture sanity checks
 
     * [ ] 4.4.1 Detect “black frame” / near-blank frame
-    * [ ] 4.4.2 Log backend + frame size + basic stats
-  * [ ] 4.5 Add capture-only command path
+    * [x] 4.4.2 Log backend + frame size + basic stats
+  * [x] 4.5 Add capture-only command path
 
-    * [ ] 4.5.1 Save frame to artifacts/debug_frames/
-    * [ ] 4.5.2 Save at least one timestamped PNG
-  * [ ] 4.6 Manual validation
+    * [x] 4.5.1 Save frame to artifacts/debug_frames/
+    * [x] 4.5.2 Save at least one timestamped PNG
+  * [x] 4.6 Manual validation
 
-    * [ ] 4.6.1 Run with game open and focused
-    * [ ] 4.6.2 Confirm saved images show the game correctly (not black)
+    * [x] 4.6.1 Run with game open and focused
+    * [x] 4.6.2 Confirm saved images show the game correctly (not black)
 
 * [ ] 5. Template pack setup (assets + conventions)
 
