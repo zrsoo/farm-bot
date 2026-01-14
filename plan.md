@@ -28,58 +28,57 @@
     * [x] 2.8.1 pytest -q passes
     * [x] 2.8.2 python -m game_watcher runs and prints config/log info
 
-* [ ] 3. Window targeting (find correct game window reliably)
+* [x] 3. Window targeting (find correct game window reliably)
 
   * [ ] 3.1 Decide the targeting key
-
-    * [ ] 3.1.1 Use window title regex (default) and/or process name (optional later)
-  * [ ] 3.2 Implement window discovery (pywin32)
+    * [x] 3.1.1 Use window title regex (default) and/or process name (optional later)
+  * [x] 3.2 Implement window discovery (pywin32)
 
     * [ ] 3.2.1 Enumerate top-level windows
     * [ ] 3.2.2 Filter by title regex
     * [ ] 3.2.3 Select best candidate (first match or “largest client area”)
-  * [ ] 3.3 Implement client-area geometry
+  * [x] 3.3 Implement client-area geometry
 
-    * [ ] 3.3.1 Get window rect + client rect
-    * [ ] 3.3.2 Convert client coords -> screen coords (ClientToScreen)
-    * [ ] 3.3.3 Return (client_left, client_top, client_width, client_height)
-  * [ ] 3.4 Implement focus/visibility checks
+    * [x] 3.3.1 Get window rect + client rect
+    * [x] 3.3.2 Convert client coords -> screen coords (ClientToScreen)
+    * [x] 3.3.3 Return (client_left, client_top, client_width, client_height)
+  * [x] 3.4 Implement focus/visibility checks
 
-    * [ ] 3.4.1 require_foreground: verify GetForegroundWindow == target
-    * [ ] 3.4.2 verify window is not minimized
-  * [ ] 3.5 Add a CLI “diagnostic” run mode (no vision yet)
+    * [x] 3.4.1 require_foreground: verify GetForegroundWindow == target
+    * [x] 3.4.2 verify window is not minimized
+  * [x] 3.5 Add a CLI “diagnostic” run mode (no vision yet)
 
-    * [ ] 3.5.1 Print selected window title + geometry each tick (or once)
-    * [ ] 3.5.2 Save results in logs
-  * [ ] 3.6 Update config/default.yaml with real title_regex for the game window
+    * [x] 3.5.1 Print selected window title + geometry each tick (or once)
+    * [x] 3.5.2 Save results in logs
+  * [x] 3.6 Update config/default.yaml with real title_regex for the game window
 
-* [ ] 4. Frame capture (dry-run: capture only, no matching yet)
+* [x] 4. Frame capture (dry-run: capture only, no matching yet)
 
-  * [ ] 4.1 Implement capture interface (base class)
+  * [x] 4.1 Implement capture interface (base class)
 
-    * [ ] 4.1.1 capture_frame(region) -> numpy image (BGR/RGB defined)
-    * [ ] 4.1.2 backend selection via config (dxcam/mss)
-  * [ ] 4.2 Implement dxcam backend
+    * [x] 4.1.1 capture_frame(region) -> numpy image (BGR/RGB defined)
+    * [x] 4.1.2 backend selection via config (dxcam/mss)
+  * [x] 4.2 Implement dxcam backend
 
-    * [ ] 4.2.1 Initialize dxcam camera
-    * [ ] 4.2.2 Capture region = window client area
-    * [ ] 4.2.3 Handle failure/None frames robustly
-  * [ ] 4.3 Implement mss backend (fallback)
+    * [x] 4.2.1 Initialize dxcam camera
+    * [x] 4.2.2 Capture region = window client area
+    * [x] 4.2.3 Handle failure/None frames robustly
+  * [x] 4.3 Implement mss backend (fallback)
 
-    * [ ] 4.3.1 Capture region = window client area
-    * [ ] 4.3.2 Convert to numpy array
+    * [x] 4.3.1 Capture region = window client area
+    * [x] 4.3.2 Convert to numpy array
   * [ ] 4.4 Implement capture sanity checks
 
     * [ ] 4.4.1 Detect “black frame” / near-blank frame
-    * [ ] 4.4.2 Log backend + frame size + basic stats
-  * [ ] 4.5 Add capture-only command path
+    * [x] 4.4.2 Log backend + frame size + basic stats
+  * [x] 4.5 Add capture-only command path
 
-    * [ ] 4.5.1 Save frame to artifacts/debug_frames/
-    * [ ] 4.5.2 Save at least one timestamped PNG
-  * [ ] 4.6 Manual validation
+    * [x] 4.5.1 Save frame to artifacts/debug_frames/
+    * [x] 4.5.2 Save at least one timestamped PNG
+  * [x] 4.6 Manual validation
 
-    * [ ] 4.6.1 Run with game open and focused
-    * [ ] 4.6.2 Confirm saved images show the game correctly (not black)
+    * [x] 4.6.1 Run with game open and focused
+    * [x] 4.6.2 Confirm saved images show the game correctly (not black)
 
 * [ ] 5. Template pack setup (assets + conventions)
 

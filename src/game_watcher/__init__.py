@@ -12,4 +12,5 @@ __all__ = [
     "get_client_rect_in_screen", 
     "is_foreground",
 ]
+
 __version__ = "0.1.0"
