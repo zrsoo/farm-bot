@@ -11,7 +11,7 @@ window:
   require_foreground: true
 
 capture:
-  backend: "dxcam"   # "dxcam" or "mss"
+  backend: "mss"   # "dxcam" or "mss"
   # If true: capture only the window client area (recommended).
   capture_window_only: true
 
