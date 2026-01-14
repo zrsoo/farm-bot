@@ -7,7 +7,7 @@ app:
 
 window:
   # You’ll set one of these once you know it.
-  title_regex: ".*YourGameTitle.*"
+  title_regex: "^METIN2$"
   require_foreground: true
 
 capture:
