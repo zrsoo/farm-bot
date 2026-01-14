@@ -28,30 +28,29 @@
     * [x] 2.8.1 pytest -q passes
     * [x] 2.8.2 python -m game_watcher runs and prints config/log info
 
-* [ ] 3. Window targeting (find correct game window reliably)
+* [x] 3. Window targeting (find correct game window reliably)
 
   * [ ] 3.1 Decide the targeting key
-
-    * [ ] 3.1.1 Use window title regex (default) and/or process name (optional later)
-  * [ ] 3.2 Implement window discovery (pywin32)
+    * [x] 3.1.1 Use window title regex (default) and/or process name (optional later)
+  * [x] 3.2 Implement window discovery (pywin32)
 
     * [ ] 3.2.1 Enumerate top-level windows
     * [ ] 3.2.2 Filter by title regex
     * [ ] 3.2.3 Select best candidate (first match or “largest client area”)
-  * [ ] 3.3 Implement client-area geometry
+  * [x] 3.3 Implement client-area geometry
 
-    * [ ] 3.3.1 Get window rect + client rect
-    * [ ] 3.3.2 Convert client coords -> screen coords (ClientToScreen)
-    * [ ] 3.3.3 Return (client_left, client_top, client_width, client_height)
-  * [ ] 3.4 Implement focus/visibility checks
+    * [x] 3.3.1 Get window rect + client rect
+    * [x] 3.3.2 Convert client coords -> screen coords (ClientToScreen)
+    * [x] 3.3.3 Return (client_left, client_top, client_width, client_height)
+  * [x] 3.4 Implement focus/visibility checks
 
-    * [ ] 3.4.1 require_foreground: verify GetForegroundWindow == target
-    * [ ] 3.4.2 verify window is not minimized
-  * [ ] 3.5 Add a CLI “diagnostic” run mode (no vision yet)
+    * [x] 3.4.1 require_foreground: verify GetForegroundWindow == target
+    * [x] 3.4.2 verify window is not minimized
+  * [x] 3.5 Add a CLI “diagnostic” run mode (no vision yet)
 
-    * [ ] 3.5.1 Print selected window title + geometry each tick (or once)
-    * [ ] 3.5.2 Save results in logs
-  * [ ] 3.6 Update config/default.yaml with real title_regex for the game window
+    * [x] 3.5.1 Print selected window title + geometry each tick (or once)
+    * [x] 3.5.2 Save results in logs
+  * [x] 3.6 Update config/default.yaml with real title_regex for the game window
 
 * [ ] 4. Frame capture (dry-run: capture only, no matching yet)
 
