@@ -7,6 +7,7 @@ __pycache__/
 
 artifacts/logs/*
 artifacts/debug_frames/*
+screenshots/
 
 # optional: keep example templates, ignore real ones if you want
 templates/*

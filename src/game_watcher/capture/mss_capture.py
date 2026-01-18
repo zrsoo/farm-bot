@@ -26,6 +26,12 @@ class MSSCapture(CaptureBackend):
 
         # Convert BGRA -> BGR (drop alpha)
         return img[:, :, :3]
+    
+        # # Convert BGRA -> BGR (drop alpha)
+        # bgr_img = img[:, :, :3]
+        
+        # # Convert BGR to grayscale
+        # return cv2.cvtColor(bgr_img, cv2.COLOR_BGR2GRAY)
 
     def close(self) -> None:
         try:
