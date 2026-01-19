@@ -28,6 +28,8 @@ def build_arg_parser() -> argparse.ArgumentParser:
     p.add_argument("--frames", type=int, default=1, help="Number of frames to capture in --diag-capture")
     p.add_argument("--frame-interval", type=float, default=1.0, help="Seconds between frames in --diag-capture")
     
+    p.add_argument("--match-pic", type=str, help="Test templates against static image (path to image file)")
+    
     return p
 
 
