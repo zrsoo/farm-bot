@@ -5,8 +5,7 @@ __pycache__/
 *.pyo
 *.log
 
-artifacts/logs/*
-artifacts/debug_frames/*
+artifacts/*
 screenshots/
 
 # optional: keep example templates, ignore real ones if you want

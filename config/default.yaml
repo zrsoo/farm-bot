@@ -16,10 +16,20 @@ capture:
   capture_window_only: true
 
 vision:
-  mode: "edges"      # "raw" | "edges" | "masked" (we’ll implement later)
-  threshold: 0.88
-  # Optional: require same match in N consecutive scans to reduce false positives.
-  require_consecutive_hits: 1
+  templates_dir: "templates"
+  active_pack: "default"
+  mode: "edges"                 # "edges" or "gray"
+  canny:
+    low: 60
+    high: 160
+    blur_ksize: 3               # 0 disables blur
+  match:
+    method: "TM_CCOEFF_NORMED"  # OpenCV string alias
+    threshold: 0.5
+    near_miss: 0.4
+    scales: [1.0]               # add e.g. [0.95, 1.0, 1.05] if needed
+    confirm_hits: 1             # require N consecutive hits
+    min_trigger_interval_s: 10  # rate limit triggers (even in dry-run)
 
 templates:
   # You’ll swap packs between runs.
@@ -49,4 +59,3 @@ debug:
   save_debug_frames: true
   save_on_match: true
   save_on_near_miss: true
-  near_miss_threshold: 0.80
